@@ -22,11 +22,6 @@
    <children>
       <TextField fx:id="encryptinput" GridPane.columnIndex="1" />
       <Button fx:id="encryptbutton" mnemonicParsing="false" onMouseClicked="#Encryption" prefHeight="73.0" prefWidth="141.0" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-      <Text fx:id="encryptoutput" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="258.6708984375" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
          <font>
             <Font size="24.0" />
@@ -43,5 +38,6 @@
             <Insets right="40.0" />
          </GridPane.margin>
       </Text>
+      <TextField fx:id="encryptoutput" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    </children>
 </GridPane>
