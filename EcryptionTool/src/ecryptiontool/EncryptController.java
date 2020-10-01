@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -22,7 +23,7 @@ public class EncryptController implements Initializable {
     @FXML
     private TextField encryptinput;
     @FXML
-    private TextField encryptoutput;
+    private Text encryptoutput;
     @FXML
     private Button encryptbutton;
 
@@ -37,10 +38,9 @@ public class EncryptController implements Initializable {
     @FXML
     private void Encryption(MouseEvent event) {
         String Clave = "31";
-        String originalString = "hola hola hola hola";
-        String encryptedString = AES.encrypt(originalString, Clave);
-        System.out.println(originalString);
-        System.out.println(encryptedString);
+        String inputString = encryptinput.getText();
+        String encryptedString = AES.encrypt(inputString, Clave);
+        encryptoutput.setText(encryptedString) ;
     }
     
 }
