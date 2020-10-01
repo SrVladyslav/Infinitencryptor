@@ -23,9 +23,9 @@ public class EncryptController implements Initializable {
     @FXML
     private TextField encryptinput;
     @FXML
-    private Text encryptoutput;
-    @FXML
     private Button encryptbutton;
+    @FXML
+    private TextField encryptoutput;
 
     /**
      * Initializes the controller class.

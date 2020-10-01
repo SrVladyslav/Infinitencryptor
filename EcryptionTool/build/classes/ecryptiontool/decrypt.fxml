@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -19,8 +20,28 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TextField fx:id="encryptinput" GridPane.columnIndex="1" />
-      <TextField fx:id="encryptoutput" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="encryptbutton" mnemonicParsing="false" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <TextField fx:id="decryptinput" GridPane.columnIndex="1" />
+      <Button fx:id="decryptbutton" mnemonicParsing="false" onMouseClicked="#decryption" prefHeight="62.0" prefWidth="135.0" text="Decrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Input" GridPane.halignment="RIGHT">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets right="40.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="decryptoutput" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="259.6708984375" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
    </children>
 </GridPane>

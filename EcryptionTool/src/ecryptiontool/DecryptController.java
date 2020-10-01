@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -20,11 +22,11 @@ import javafx.scene.control.TextField;
 public class DecryptController implements Initializable {
 
     @FXML
-    private TextField encryptinput;
+    private Button decryptbutton;
     @FXML
-    private TextField encryptoutput;
+    private Text decryptoutput;
     @FXML
-    private Button encryptbutton;
+    private TextField decryptinput;
 
     /**
      * Initializes the controller class.
@@ -33,5 +35,13 @@ public class DecryptController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void decryption(MouseEvent event) {
+        String Clave = "31";
+        String inputString = decryptinput.getText();
+        String decryptedString = AES.decrypt(inputString, Clave);
+        decryptoutput.setText(decryptedString) ;
+    }
     
 }
