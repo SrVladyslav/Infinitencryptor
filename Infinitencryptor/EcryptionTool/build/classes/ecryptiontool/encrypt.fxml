@@ -63,5 +63,13 @@
                </GridPane.margin></TextField>
          </children>
       </GridPane>
+      <Button fx:id="encryptback" mnemonicParsing="false" onMouseClicked="#encryptgoback" text="&lt;" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="30.0" top="30.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </GridPane>
