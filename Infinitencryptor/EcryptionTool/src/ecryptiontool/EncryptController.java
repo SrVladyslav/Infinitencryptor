@@ -40,7 +40,7 @@ public class EncryptController implements Initializable {
 
     @FXML
     private void Encryption(MouseEvent event) {
-        String Clave = "31";
+        String Clave = encryptkey.getText();
         String inputString = encryptinput.getText();
         String encryptedString = AES.encrypt(inputString, Clave);
         encryptoutput.setText(encryptedString) ;

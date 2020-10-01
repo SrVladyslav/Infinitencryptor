@@ -40,7 +40,7 @@ public class DecryptController implements Initializable {
 
     @FXML
     private void decryption(MouseEvent event) {
-        String Clave = "31";
+        String Clave = decryptkey.getText();
         String inputString = decryptinput.getText();
         String decryptedString = AES.decrypt(inputString, Clave);
         decryptoutput.setText(decryptedString) ;
