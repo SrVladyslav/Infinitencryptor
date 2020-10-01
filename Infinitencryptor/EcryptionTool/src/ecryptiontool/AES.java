@@ -9,6 +9,11 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Optional;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
  
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
@@ -51,6 +56,13 @@ public class AES {
         catch (Exception e) 
         {
             System.out.println("Error while encrypting: " + e.toString());
+         Alert alert = new Alert(AlertType.INFORMATION);
+         alert.setTitle("Error");
+         alert.setHeaderText("An error has ocurred. Use another input/key");
+         alert.setContentText("");
+         ButtonType buttonOK = new ButtonType("Ok", ButtonData.CANCEL_CLOSE);
+         alert.getButtonTypes().setAll(buttonOK);
+         Optional<ButtonType> result = alert.showAndWait();
         }
         return null;
     }
@@ -67,6 +79,13 @@ public class AES {
         catch (Exception e) 
         {
             System.out.println("Error while decrypting: " + e.toString());
+         Alert alert = new Alert(AlertType.INFORMATION);
+         alert.setTitle("Error");
+         alert.setHeaderText("An error has ocurred. Use another input/key");
+         alert.setContentText("");
+         ButtonType buttonOK = new ButtonType("Ok", ButtonData.CANCEL_CLOSE);
+         alert.getButtonTypes().setAll(buttonOK);
+         Optional<ButtonType> result = alert.showAndWait();
         }
         return null;
     }
