@@ -22,7 +22,10 @@
   </rowConstraints>
    <children>
       <TextField fx:id="encryptinput" GridPane.columnIndex="1" />
-      <Button fx:id="encryptbutton" mnemonicParsing="false" onMouseClicked="#Encryption" prefHeight="73.0" prefWidth="141.0" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="encryptbutton" mnemonicParsing="false" onMouseClicked="#Encryption" prefHeight="73.0" prefWidth="141.0" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Output:" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
          <font>
             <Font size="24.0" />
@@ -45,16 +48,19 @@
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="120.0" minHeight="0.0" prefHeight="106.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="237.0" minHeight="10.0" prefHeight="131.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="KEY:" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Key:" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <TextField fx:id="encryptkey" GridPane.rowIndex="1" />
+            <TextField fx:id="encryptkey" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin></TextField>
          </children>
       </GridPane>
    </children>
