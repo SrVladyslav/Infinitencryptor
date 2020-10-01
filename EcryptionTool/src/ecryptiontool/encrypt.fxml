@@ -21,6 +21,6 @@
    <children>
       <TextField fx:id="encryptinput" GridPane.columnIndex="1" />
       <TextField fx:id="encryptoutput" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="encryptbutton" mnemonicParsing="false" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Button fx:id="encryptbutton" mnemonicParsing="false" onMouseClicked="#Encryption" text="Encrypt" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
    </children>
 </GridPane>

@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package ecryptiontool;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -33,5 +33,16 @@ public class EncryptController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void Encryption(MouseEvent event) {
+        String Clave = "31";
+        String originalString = "hola hola hola hola";
+        String encryptedString = AES.encrypt(originalString, Clave);
+        System.out.println(originalString);
+        System.out.println(encryptedString);
+    }
     
 }
+
+ 
